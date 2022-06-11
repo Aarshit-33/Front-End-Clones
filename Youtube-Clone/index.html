@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="icon" type="image/x-icon" href="assets/Youtube-icon.ico" />
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-bar").classList.toggle("hidden");
+            document.getElementById("nav-bar-2").classList.toggle("hidden");
+            document.getElementById("container").classList.toggle("w-10/12");
+            document.getElementById("container").classList.toggle("w-11/12");
+            document.getElementById("mainContent").classList.toggle("left-[20%]");
+            document.getElementById("mainContent").classList.toggle("left-[9%]");
+        }
+        function ctn() {
+            var content = '<div class="max-w-sm rounded overflow-hidden bg-transparent w-full cursor-pointer"><img class="w-full" src = "assets/thumbnail.jpg" alt = "Demo" ><div class="p-1 flex space-x-2" ><img src="assets/channel-image.png" alt="" class="rounded-3xl w-10 h-10"><div class=""><p class="text-white sm:text-[.5rem] md:text-[.6rem] lg:text-[1rem] mb-1" >Lorem, ipsum dolor sit amet consectetur adipisicing elit.Quae, nobis!</p><div class="flex space-x-1 items-baseline"><p class="text-zinc-500 sm:text-[.4rem] md:text-[.5rem] lg:text-[.8rem] mb-1 hover:text-gray-200">Channel Name </p><img src="assets/verified.png" class="sm:w-2 md:w-3 lg:w-4 sm:h-2 md:h-3 lg:h-4" alt=""></div><p class="text-zinc-500 sm:text-[.4rem] md:text-[.5rem] lg:text-[.8rem] mb-1">Views - Upload Time</p></div ><img src="assets/more.png" alt="" class="w-5 h-5 my-1"></div></div> ';
+            var main = content;
+            for (let index = 1; index < 20; index++) {
+                main += content;
+
+            }
+
+            document.getElementById('mainContent').innerHTML = main;
+        }
+    </script>
+    <title>YouTube</title>
+    <link rel="stylesheet" href="assets/index.css">
+</head>
+
+<body class="bg-zinc-800 text-white" onload="ctn();">
+    <header class="h-28 w-full flex justify-between px-10 fixed z-10 bg-zinc-800/90">
+        <section class="flex justify-start items-center space-x-10 w-2/12">
+            <img src="assets/menu.png" class="sm:w-4 md:w-5 lg:w-6 sm:h-4 md:h-5 lg:h-6 cursor-pointer"
+                onclick="toggleMenu();" alt="menu" />
+            <img src="assets/Youtube-logo.png" class="w-20 h-5" alt="menu" />
+        </section>
+        <div class="w-10/12 py-2 divide-y-2 space-y-3 divide-zinc-700">
+            <div class=" flex justify-between">
+                <section> </section>
+                <section class="hidden md:flex justify-center items-center space-x-5">
+                    <div>
+                        <form>
+                            <div class="flex">
+                                <div class="relative w-96">
+                                    <input type="search" id='location-search"'
+                                        class="block p-1 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-sm border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-black dark:border-l-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
+                                        placeholder="Search" required="" />
+                                    <button type="submit"
+                                        class="absolute top-0 right-0 px-5 py-2 -my-1  text-sm font-medium text-white bg-zinc-500 rounded-r-sm border border-zinc-700 focus:ring-1 focus:outline-none focus:ring-blue-300">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <button class="bg-black focus:bg-zinc-600 p-2 rounded-2xl">
+                        <img src="assets/microphone.png" class="w-5 h-5" alt="microphone" />
+                    </button>
+                </section>
+                <section class="flex justify-center items-center space-x-5">
+                    <img src="assets/four-squares.png" class="w-4 h-4 cursor-pointer" alt="categories" />
+                    <img src="assets/more.png" class="w-4 h-4 cursor-pointer" alt="more" />
+                    <button type="button"
+                        class="text-blue-500 border border-cyan-700 focus:border-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center flex justify-between items-center space-x-2">
+                        <img src="assets/person.png" class="w-4 h-4" alt="profile" />
+                        <span> Sign in</span>
+                    </button>
+                </section>
+            </div>
+
+            <section class="hidden md:flex justify-start items-center py-3">
+                <ul
+                    class="flex flex-row overflow-auto scrollbar-none scrollbar-thumb-blue-700 scrollbar-track-blue-300 overflow-y-scroll hover:scrollbar-thumb-green-700">
+                    <li class="category-link">All</li>
+                    <li class="category-link">Music</li>
+                    <li class="category-link">lecture</li>
+                    <li class="category-link">Live</li>
+                    <li class="category-link">Drama</li>
+                    <li class="category-link">comedy</li>
+                    <li class="category-link">Union public service</li>
+                    <li class="category-link">Motivation</li>
+                    <li class="category-link">T-Series</li>
+                    <li class="category-link">Laptop</li>
+                    <li class="category-link">Films</li>
+                    <li class="category-link">Pop Music</li>
+                    <li class="category-link">Smart Phones</li>
+                    <li class="category-link">Recently uploaded</li>
+                </ul>
+            </section>
+        </div>
+    </header>
+
+    <main class="flex">
+        <section id="nav-bar" class="w-2/12 sm:text-[.5rem] md:text-[.6rem] lg:text-[1rem] fixed top-28">
+            <nav
+                class="divide-y-2 divide-zinc-700 scrollbar-thin hover:scrollbar-thumb-zinc-500 h-screen overflow-y-scroll">
+                <ul class="py-3">
+                    <li class="nav-link">
+                        <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/home.png" />
+                        <span>Home</span>
+                    </li>
+                    <li class="nav-link">
+                        <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/home.png" />
+                        <span>Explore</span>
+                    </li>
+                    <li class="nav-link">
+                        <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/home.png" />
+                        <span>Shorts</span>
+                    </li>
+                    <li class="nav-link">
+                        <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/home.png" />
+                        <span>Subscripiton</span>
+                    </li>
+                </ul>
+                <ul class="py-3">
+                    <li class="nav-link">
+                        <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/home.png" />
+                        <span>Library</span>
+                    </li>
+                    <li class="nav-link">
+                        <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/home.png" />
+                        <span>History</span>
+                    </li>
+                </ul>
+                <ul class="py-3">
+                    <li class="nav-link">
+                        <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/home.png" />
+                        <span>Music</span>
+                    </li>
+                    <li class="nav-link">
+                        <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/home.png" />
+                        <span>Sports</span>
+                    </li>
+                    <li class="nav-link">
+                        <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/home.png" />
+                        <span>Gaming</span>
+                    </li>
+                    <li class="nav-link">
+                        <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/home.png" />
+                        <span>Movies</span>
+                    </li>
+                    <li class="nav-link">
+                        <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/home.png" />
+                        <span>News</span>
+                    </li>
+                    <li class="nav-link">
+                        <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/home.png" />
+                        <span>Live</span>
+                    </li>
+                    <li class="nav-link">
+                        <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/home.png" />
+                        <span>Fashion & Beauty</span>
+                    </li>
+                    <li class="nav-link">
+                        <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/home.png" />
+                        <span>Learning</span>
+                    </li>
+                    <li class="nav-link">
+                        <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/yt.png" />
+                        <span>Spotlight</span>
+                    </li>
+                    <li class="nav-link">
+                        <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/home.png" />
+                        <span>360° Video</span>
+                    </li>
+                </ul>
+                <ul class="py-3">
+                    <li class="nav-link">
+                        <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/home.png" />
+                        <span>Browse channels</span>
+                    </li>
+                </ul>
+                <ul class="py-3">
+                    <li class="nav-link">
+                        <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/home.png" />
+                        <span>YouTube Premium</span>
+                    </li>
+                    <li class="nav-link">
+                        <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/home.png" />
+                        <span>Live</span>
+                    </li>
+                </ul>
+                <ul class="py-3">
+                    <li class="nav-link">
+                        <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/home.png" />
+                        <span>Setings</span>
+                    </li>
+                    <li class="nav-link">
+                        <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/home.png" />
+                        <span>Report History</span>
+                    </li>
+                    <li class="nav-link">
+                        <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/home.png" />
+                        <span>Help</span>
+                    </li>
+                    <li class="nav-link">
+                        <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/home.png" />
+                        <span>Send Report</span>
+                    </li>
+                </ul>
+                <p class="text-zinc-400 text-xs p-3 pb-20">
+                    About Press Copyright Contact us Creators Advertise
+                    Developers Terms PrivacyPolicy & Safety How YouTube
+                    works Test new features © 2022 Google LLC
+                </p>
+            </nav>
+        </section>
+        <section id="nav-bar-2" class="w-1/12 hidden sm:text-[.5rem] md:text-[.6rem] lg:text-[1rem] fixed top-28">
+            <nav class="flex flex-col">
+
+                <li class="side-link">
+                    <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/home.png" /><span>Home</span>
+                </li>
+                <li class="side-link">
+                    <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/home.png" />
+                    <span>Explore</span>
+                </li>
+                <li class="side-link">
+                    <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/yt.png" />
+                    <span>Shorts</span>
+                </li>
+                <li class="side-link">
+                    <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/home.png" />
+                    <span>Subscripiton</span>
+                </li>
+                <li class="side-link">
+                    <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/home.png" />
+                    <span>Liabrary</span>
+                </li>
+                <li class="side-link">
+                    <img class="sm:w-2 md:w-4 lg:w-5 sm:h-2 md:h-4 lg:h-5" src="assets/home.png" />
+                    <span>History</span>
+                </li>
+            </nav>
+        </section>
+
+        <section id="container" class="relative w-10/12">
+            <div id="mainContent"
+                class="w-full bg-zinc-900 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 col-auto justify-center justify-items-center px-4 lg:m-auto absolute left-[20%] top-28">
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
